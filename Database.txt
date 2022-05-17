@@ -1,6 +1,6 @@
 database : tanya_jawab
 tabel:
-	User:
+	Pengguna:
 		varchar username (PK)
 		varchar pass
 		varchar nama_asli	
@@ -18,7 +18,7 @@ tabel:
 
 CREATE DATABASE tanya_jawab;
 
-CREATE TABLE User(
+CREATE TABLE Pengguna(
 username VARCHAR(50),
 password VARCHAR(20),
 nama_akun VARCHAR(50),
@@ -31,7 +31,7 @@ pertanyaan VARCHAR(300),
 username VARCHAR (50),
 #foto_pertanyaan BLOB,
 CONSTRAINT pertanyaan_PK PRIMARY KEY(pertanyaan),
-CONSTRAINT uname_FK FOREIGN KEY(username) references User(username) #ON DELETE CASCADE #ON UPDATE CASCADE);
+CONSTRAINT uname_FK FOREIGN KEY(username) references Pengguna(username) #ON DELETE CASCADE #ON UPDATE CASCADE);
 
 CREATE TABLE J_K(
 komentar VARCHAR (300),
