@@ -40,10 +40,10 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
 
-            <a href="uploadquest.html"><h1>+</h1></a>
+            <a href="uploadquest.php"><h1>+</h1></a>
             <!-- <i class="bi bi-plus-lg"></i> -->
 
-            <a href="userpage.html"><img src="img/spo6.png" alt="mdo" class="pp"></a>
+            <a href="userpage.php"><img src="img/spo6.png" alt="mdo" class="pp"></a>
 
         </div>
     </header>
