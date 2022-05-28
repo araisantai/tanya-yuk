@@ -9,16 +9,17 @@ session_start();
 if(isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $nama_akun = $_POST['nama_akun'];
   
-    $pemilik_insert_query = "INSERT INTO pengguna(username, password) VALUES('$username', '$password')";  
+    $pemilik_insert_query = "INSERT INTO pengguna(username, password, nama_akun) VALUES('$username', '$password', '$nama_akun')";  
     
     $pemilik_result = pg_query($db, $pemilik_insert_query);  
   
     
     if($pemilik_result) {
-      header("Location: ../page/homepage.php");
+      header("Location: ../front end/index.php");
     } else {
-      header('Location: ../page/homepage.php');  
+      header('Location: ../front end/index.php');  
     }
   }
  
@@ -40,6 +41,9 @@ if(isset($_POST['submit'])) {
     <div class="container">
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
+            <div class="input-group">
+                <input type="text" placeholder="Nama akun" name="nama_akun" value="<?php echo $nama_akun; ?>" required>
+            </div>
             <div class="input-group">
                 <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
             </div>

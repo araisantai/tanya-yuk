@@ -1,63 +1,27 @@
-<?php 
- 
-include '../function/config.php';
- 
-error_reporting(0);
- 
-session_start();
- 
-if (isset($_SESSION['username'])) {
-    header("Location: berhasil_login.php");
-}
- 
-if (isset($_POST['submit'])) {
-    $u_name = $_POST['username'];
-    $password = md5($_POST['password']);
- 
-    $sql = "SELECT * FROM users WHERE username='$_uname' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header("Location: berhasil_login.php");
-    } else {
-        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
-    }
-}
- 
-?>
- 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- 
-    <link rel="stylesheet" type="text/css" href="style.css">
- 
-    <title>Niagahoster Tutorial</title>
+  <title>PHP PostgreSQL Registration & Login Example </title>
+  <meta name="keywords" content="PHP,PostgreSQL,Insert,Login">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="alert alert-warning" role="alert">
-        <?php echo $_SESSION['error']?>
-    </div>
- 
-    <div class="container">
-        <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
-            <div class="input-group">
-                <input type="username" placeholder="Username" name="username" value="<?php echo $u_name; ?>" required>
-            </div>
-            <div class="input-group">
-                <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
-            </div>
-            <div class="input-group">
-                <button name="submit" class="btn">Login</button>
-            </div>
-            <p class="login-register-text">Anda belum punya akun? <a href="register_page.php">Register</a></p>
-        </form>
-    </div>
+<div class="container">
+  <h2>Login Here </h2>
+  <form action="action-login.php" method="POST" class="sign-in-form">
+        <h2 class="title">Masuk ke Akun Anda</h2>
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" name="username" required="required"/>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" required="required"/>
+        </div>
+        <input type="submit" value="Login" name="masuk" class="btn solid" />
+    </form>
+</div>
 </body>
 </html>
