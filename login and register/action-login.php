@@ -6,7 +6,7 @@ if(isset($_POST['masuk']))
 {
     extract($_POST);
     $username=$_POST['username'];
-    $pass=md5($_POST['password']);
+    $pass=($_POST['password']);
     $pgsql=pg_query("SELECT * FROM pengguna WHERE username='$username'");
     $result=pg_fetch_array($pgsql);
     
@@ -14,12 +14,10 @@ if(isset($_POST['masuk']))
     $_SESSION['loggedin']=false;
 
     //apakah berhasil
-    $verif=password_verify($pass, $result['password']);
-    if(($result['username']==$username)&&($verif))
+    if(($result['username']==$username)&&($result['password']==$pass))
     {
         $_SESSION['loggedin']=true;
         $_SESSION["login_time_stamp"] = time();
-        $_SESSION['username'] = $nama;
         header('Location:cek_login.php');
     }
     else
