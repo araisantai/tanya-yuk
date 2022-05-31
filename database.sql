@@ -16,7 +16,15 @@
 -- 		varchar pertanyaan (FK)
 -- 		BLOB image ## opsional
 
+DROP DATABASE IF EXISTS tanya_jawab;
 CREATE DATABASE tanya_jawab;
+
+
+-- DROP TABLE
+DROP TABLE IF EXISTS J_K;
+DROP TABLE IF EXISTS Pertanyaan;
+DROP TABLE IF EXISTS Pengguna;
+
 
 CREATE TABLE Pengguna(
 username VARCHAR(50),
@@ -29,19 +37,12 @@ CONSTRAINT uname_PK PRIMARY KEY(username));
 CREATE TABLE Pertanyaan(
 pertanyaan VARCHAR(300),
 username VARCHAR (50),
--- #foto_pertanyaan BLOB,
+foto_pertanyaan VARCHAR (50),
 CONSTRAINT pertanyaan_PK PRIMARY KEY(pertanyaan),
 CONSTRAINT uname_FK FOREIGN KEY(username) references Pengguna(username) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE J_K(
 komentar VARCHAR (300),
 pertanyaan VARCHAR (300),
--- #foto_komentar BLOB,
+foto_komentar VARCHAR (50),
 CONSTRAINT uname_FK FOREIGN KEY(pertanyaan) references Pertanyaan(pertanyaan) ON DELETE CASCADE ON UPDATE CASCADE);
-
-
-
-DROP TABLE J_K;
-DROP TABLE Pertanyaan;
-DROP TABLE Pengguna;
-

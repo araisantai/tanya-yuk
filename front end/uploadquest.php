@@ -1,21 +1,12 @@
 <?php 
 include 'header.php';
 include '../function/config.php';
-if (isset($_POST['submit'])) {
-    $message = $_POST['message'];
-    // tambahin id/uid di database
-    // untuk pengenal user
-    // access cookie
-    $id = $_COOKIE['id'];
-    $user = $id;
-    $query = "INSERT INTO Pertanyaan(pertanyaan, username) VALUES('$message', '$user')";
-}
 ?>  
 <div class="upquest">
     <div class="container">
         <div class="row">
             <!-- form here -->
-            <form action="uploadquest.php" method="post" role="form" class="php-email-form">
+            <form action="question.php" method="post" role="form" class="php-email-form">
                 <div class="row">
                     <div class="form-group col-lg-8 mb-2">
                         <label for="name">Pertanyaan</label>
@@ -25,7 +16,7 @@ if (isset($_POST['submit'])) {
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Upload Gambar</label>
                             <div class="img-label">
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" name="file" id="file">
                             </div>
                         </div>
                     </div>
@@ -44,13 +35,13 @@ if (isset($_POST['submit'])) {
                     <div class="error-message"></div>
                     <div class="sent-message">Pertanyaanmu telah terupload</div>
                 </div>
-                <div class="text-center"><button type="submit">Kirim Pertanyaan</button></div>
+                <div class="text-center"><button type="submit" name="submit">Kirim Pertanyaan</button></div>
             </form>
             <!-- end form -->
         </div>
     </div>
 </div>
 
-<? 
+<?php
 include 'footer.php'
 ?>

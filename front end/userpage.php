@@ -5,7 +5,7 @@ include '../function/config.php';
 session_start();
 
 if(!isset($_SESSION["username"])) {
-    header(Location: "index.php");
+    header("Location: index.php");
 }
 
 $u_name = $_SESSION["username"];
@@ -28,6 +28,6 @@ $result=pg_fetch_array($pgsql);
         </div>
     </div>
 </section>
-<?
+<?php
 include 'footer.php'
 ?>
