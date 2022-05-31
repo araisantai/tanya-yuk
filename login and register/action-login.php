@@ -1,7 +1,8 @@
 <?php
 include '../function/config.php';
 
-//cek apakah tombol udah di klik
+session_start();
+
 if(isset($_POST['masuk']))
 {
     extract($_POST);
@@ -11,14 +12,12 @@ if(isset($_POST['masuk']))
     $result=pg_fetch_array($pgsql);
     
     session_start();
-    $_SESSION['loggedin']=false;
 
     //apakah berhasil
     if(($result['username']==$username)&&($result['password']==$pass))
     {
-        $_SESSION['loggedin']=true;
-        $_SESSION["login_time_stamp"] = time();
-        header('Location:cek_login.php');
+        $_SESSION['username']=$result['username'];
+        header('Location:../front end/index.php');
     }
     else
     {

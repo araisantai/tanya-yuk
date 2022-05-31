@@ -4,7 +4,6 @@ include '../function/config.php';
  
 error_reporting(0);
  
-session_start();
  
 if(isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -17,9 +16,10 @@ if(isset($_POST['submit'])) {
   
     
     if($pemilik_result) {
-      header("Location: ../front end/index.php");
+        header("Location: login_page.php");
     } else {
-      header('Location: ../front end/index.php');  
+        echo "Gagal";
+        header("Location: register_page.php");  
     }
   }
  

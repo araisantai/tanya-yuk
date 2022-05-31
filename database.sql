@@ -40,6 +40,8 @@ pertanyaan VARCHAR (300),
 CONSTRAINT uname_FK FOREIGN KEY(pertanyaan) references Pertanyaan(pertanyaan) ON DELETE CASCADE ON UPDATE CASCADE);
 
 
-DROP TABLE IF EXIST User;
-DROP TABLE IF EXIST Pertanyaan;
-DROP TABLE IF EXIST J_K;
+
+DROP TABLE J_K;
+DROP TABLE Pertanyaan;
+DROP TABLE Pengguna;
+
