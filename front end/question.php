@@ -2,7 +2,7 @@
 include '../function/config.php';
 if(isset($_POST['submit'])) {
         $message = $_POST['message'];
-        $user = "user"; // ambil user masih blum, masih dipikirin dulu (session / cookies)
+        $user = $_POST['username'];
         $uploadfile = $_POST['file'];
         $query = "INSERT INTO pertanyaan(pertanyaan, username, foto_pertanyaan) VALUES('$message', '$user', '$uploadfile')";
         $result = pg_query($db, $query);

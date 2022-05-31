@@ -1,6 +1,14 @@
 <?php 
 include 'header.php';
 include '../function/config.php';
+session_start();
+
+if(!isset($_SESSION["username"])) {
+    header("Location: index.php");
+}
+
+$user = $_SESSION["username"];
+
 ?>  
 <div class="upquest">
     <div class="container">
@@ -21,6 +29,7 @@ include '../function/config.php';
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="username" value="<?= $user; ?>">
                 <div class="form-group">
                     <label for=" name exampleFormControlSelect1">Kategori</label>
                     <select class="form-select" aria-label="Default select example" required>
