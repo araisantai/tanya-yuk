@@ -12,7 +12,7 @@ $content = pg_fetch_array($query);
 ?>
 <body>
     <br><br><br><br><br><br>
-    <form action="answer.php" method="post">
+    <form action="answer.php" method="post" enctype="multipart/form-data">
         <h4>Pertanyaan</h4>
         <h5><?= $content["pertanyaan"]; ?></h5>
         <input type="hidden" name="id_pertanyaan" value="<?= $id_tanya; ?>">

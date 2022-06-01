@@ -14,7 +14,7 @@ $user = $_SESSION["username"];
     <div class="container">
         <div class="row">
             <!-- form here -->
-            <form action="question.php" method="post" role="form" class="php-email-form">
+            <form action="question.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
                 <div class="row">
                     <div class="form-group col-lg-8 mb-2">
                         <label for="name">Pertanyaan</label>
