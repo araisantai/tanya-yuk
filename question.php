@@ -11,7 +11,7 @@ if(isset($_POST['submit'])) {
         $query = "INSERT INTO pertanyaan(pertanyaan, username, foto_pertanyaan) VALUES('$message', '$user', '$uploadfile')";
         $result = pg_query($db, $query);
         if( $result==TRUE ) {
-		header('Location: uploadquest.php?upload=berhasil');
+		header('Location: index.php');
 	} else {
 		header('Location: uploadquest.php?upload=gagal');
 	}

@@ -23,7 +23,7 @@ $result=pg_fetch_array($pgsql);
             <p><?php echo $result['nama_akun']; ?></p>
         </div>
         <div class="text-center">
-            <div class="btn-edit">Edit <i class="bi bi-pencil-square"></i></div>
+            <div class="btn-edit"><a href="edituser.php">Edit</a><i class="bi bi-pencil-square"></i></div>
         </div>
         <div class="text-center">
             <div class="btn-edit"><a href="login and register/logout.php">Logout</a></div>
