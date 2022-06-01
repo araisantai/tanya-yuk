@@ -1,7 +1,6 @@
 <?php 
-include 'header.php';
-include '../function/config.php';
-
+include 'includes/header.php';
+include 'function/config.php';
 session_start();
 
 if(!isset($_SESSION["username"])) {
@@ -17,7 +16,7 @@ $result=pg_fetch_array($pgsql);
 <section id="profile">
     <div class="card">
         <div class="profile d-flex justify-content-center">
-            <img src="img/spo6.png" alt="mdo" class="profilepict">
+            <img src="frontend/img/spo6.png" alt="mdo" class="profilepict">
         </div>
         <div class="isi">
             <p><?php echo $result['username']; ?></p>

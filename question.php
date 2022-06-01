@@ -1,5 +1,5 @@
 <?php 
-include '../function/config.php';
+include 'function/config.php';
 if(isset($_POST['submit'])) {
         $message = $_POST['message'];
         $user = $_POST['username'];

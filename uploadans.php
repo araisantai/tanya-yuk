@@ -1,6 +1,6 @@
 <?php 
-include 'header.php';
-include '../function/config.php';
+include 'includes/header.php';
+include 'function/config.php';
 session_start();
 
 if(!isset($_SESSION["username"])) {

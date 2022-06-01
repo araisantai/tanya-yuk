@@ -1,6 +1,6 @@
 <?php 
-include 'header.php';
-include '../function/config.php';
+include 'includes/header.php';
+include 'function/config.php';
 $tanya = pg_query("SELECT * FROM pertanyaan");
 $komen = pg_query("SELECT * FROM j_k");
 ?>  

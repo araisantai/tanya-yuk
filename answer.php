@@ -1,5 +1,5 @@
 <?php 
-include '../function/config.php';
+include 'function/config.php';
 if(isset($_POST['submit'])) {
     // $ck = var_dump($_POST);
     // die($ck);
