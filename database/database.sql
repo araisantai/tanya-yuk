@@ -45,6 +45,7 @@ CONSTRAINT uname_FK FOREIGN KEY(username) references Pengguna(username) ON DELET
 CREATE TABLE J_K(
 komentar VARCHAR (300),
 id_pertanyaan serial,
+username VARCHAR (50),
 foto_komentar VARCHAR (50),
 CONSTRAINT uname_FK FOREIGN KEY(id_pertanyaan) references Pertanyaan(id_pertanyaan) ON DELETE CASCADE ON UPDATE CASCADE);
 
