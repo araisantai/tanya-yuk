@@ -35,14 +35,15 @@ nama_akun VARCHAR(50),
 CONSTRAINT uname_PK PRIMARY KEY(username));
 
 CREATE TABLE Pertanyaan(
+id_pertanyaan serial,
 pertanyaan VARCHAR(300),
 username VARCHAR (50),
 foto_pertanyaan VARCHAR (50),
-CONSTRAINT pertanyaan_PK PRIMARY KEY(pertanyaan),
+CONSTRAINT pertanyaan_PK PRIMARY KEY(id_pertanyaan),
 CONSTRAINT uname_FK FOREIGN KEY(username) references Pengguna(username) ON DELETE CASCADE ON UPDATE CASCADE);
 
 CREATE TABLE J_K(
 komentar VARCHAR (300),
-pertanyaan VARCHAR (300),
+id_pertanyaan serial,
 foto_komentar VARCHAR (50),
-CONSTRAINT uname_FK FOREIGN KEY(pertanyaan) references Pertanyaan(pertanyaan) ON DELETE CASCADE ON UPDATE CASCADE);
+CONSTRAINT uname_FK FOREIGN KEY(id_pertanyaan) references Pertanyaan(id_pertanyaan) ON DELETE CASCADE ON UPDATE CASCADE);
