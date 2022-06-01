@@ -36,5 +36,5 @@ if (isset($_GET['search'])) {
 </section>
 
 <?php
-include 'footer.php'
+include 'includes/footer.php'
 ?>

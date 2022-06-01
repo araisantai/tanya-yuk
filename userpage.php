@@ -31,5 +31,5 @@ $result=pg_fetch_array($pgsql);
     </div>
 </section>
 <?php
-include 'footer.php'
+include 'includes/footer.php'
 ?>
