@@ -47,3 +47,16 @@ komentar VARCHAR (300),
 id_pertanyaan serial,
 foto_komentar VARCHAR (50),
 CONSTRAINT uname_FK FOREIGN KEY(id_pertanyaan) references Pertanyaan(id_pertanyaan) ON DELETE CASCADE ON UPDATE CASCADE);
+
+-- insert data
+INSERT INTO Pengguna(username, password, nama_akun) VALUES 
+('lewis', 'password123', 'name12'),
+('charles', 'password123', 'name14'),
+('ahmad', 'password123', 'name32');
+
+INSERT INTO Pertanyaan(pertanyaan, username, foto_pertanyaan) VALUES
+('apakah java lebih baik dari C++?', 'lewis', 'img.png'),
+('apakah C++ lebih baik dari java?', 'charles', 'img.png'),
+('apakah java lebih baik dari C++?', 'ahmad', 'img.png'),
+('bagaimana cara belajar programming?', 'charles', 'img.png'),
+('apakah bisa belajar java 1 minggu?', 'ahmad', 'img.png');

@@ -1,98 +1,28 @@
 <?php 
 include 'header.php';
-
+include '../function/config.php';
+$tanya = pg_query("SELECT * FROM pertanyaan");
+$komen = pg_query("SELECT * FROM j_k");
 ?>  
 <!--Kolom Pertanyaan-->
 <section id="Question" class="section-bg">
     <div class="row gx-5" style="margin: auto;">
         <div class="col">
-            <h1>Recently Added</h1>
+            <h1>Forum Pertanyaan</h1>            
+            <?php while($result = pg_fetch_array($tanya)) :?>
+            <a href="uploadans.php?pertanyaan=<?= $result['id_pertanyaan']; ?>">
             <div class="p-5">
                 <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                     <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
+                    <h4><?= $result['pertanyaan']; ?></h4>
+                    <span><?= $result['username']; ?></span>
                     <p>Jawaban (Kalo Ada)</p>
                     </div>
                 </div>
             </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
+            </a>
+        <?php endwhile; ?>
         </div>
-        <div class="col">
-            <h1>Trending Question</h1>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member-info">
-                    <h4>Question</h4>
-                    <span>Kategori/Siapa yg Nanya</span>
-                    <p>Jawaban (Kalo Ada)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
 
