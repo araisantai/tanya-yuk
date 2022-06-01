@@ -35,8 +35,8 @@
 
             <a class="logo me-auto"><img src="img/favicon.png" alt="" class="img-fluid"></a>
 
-            <form class="d-flex w-75" style="margin-bottom: 0px;">
-                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            <form class="d-flex w-75" style="margin-bottom: 0px;" action="index.php" method="get">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search..." aria-label="Search" autocomplete="off">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
 

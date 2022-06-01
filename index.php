@@ -1,8 +1,17 @@
 <?php 
 include 'includes/header.php';
 include 'function/config.php';
-$tanya = pg_query("SELECT * FROM pertanyaan");
+$tanya = pg_query("SELECT * FROM pertanyaan ORDER BY id_pertanyaan DESC");
 $komen = pg_query("SELECT * FROM j_k");
+
+if (isset($_GET['search'])) {
+    $search = $_GET["search"];
+    $tanya = pg_query("SELECT * FROM pertanyaan 
+    WHERE pertanyaan LIKE '%$search%' 
+    OR username LIKE '%$search%'
+    ");
+}
+
 ?>  
 <!--Kolom Pertanyaan-->
 <section id="Question" class="section-bg">
