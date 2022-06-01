@@ -34,7 +34,6 @@ if (isset($_GET['search'])) {
         </div>
     </div>
 </section>
-
 <?php
 include 'includes/footer.php'
 ?>
