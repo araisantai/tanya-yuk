@@ -8,7 +8,12 @@ if(!isset($_SESSION["username"])) {
 }
 
 $user = $_SESSION["username"];
-
+if (isset($_GET['status']) == 'gagal') {
+    echo    "<script>
+                window.location.href='uploadquest.php';
+                alert('data anda gagal dimasukkan');
+            </script>";
+}
 ?>  
 <div class="upquest">
     <div class="container">

@@ -11,6 +11,18 @@ $id_tanya = $_GET["pertanyaan"];
 $tanya = pg_query("SELECT * FROM pertanyaan WHERE id_pertanyaan='$id_tanya'");
 $content = pg_fetch_array($tanya);
 $komentar = pg_query("SELECT * FROM j_k WHERE id_pertanyaan='$id_tanya'");
+
+if (isset($_GET['status']) == 'berhasil') {
+    echo    "<script>
+                window.location.href='uploadans.php?pertanyaan=".$id_tanya."';
+                alert('data anda berhasil dimasukkan');
+            </script>";
+} else if (isset($_GET['status']) == 'gagal') {
+    echo    "<script>
+                window.location.href='uploadans.php?pertanyaan=".$id_tanya."';
+                alert('data anda gagal dimasukkan');
+            </script>";
+}
 ?>
 <body>
     <br><br><br><br><br><br>

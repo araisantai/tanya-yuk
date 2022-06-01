@@ -10,7 +10,17 @@ if(!isset($_SESSION["username"])) {
 $u_name = $_SESSION["username"];
 $pgsql=pg_query("SELECT * FROM pengguna WHERE username = '$u_name'");
 $result=pg_fetch_array($pgsql);
-
+if (isset($_GET['status']) == 'berhasil') {
+    echo    "<script>
+                window.location.href='userpage.php';
+                alert('data anda berhasil dimasukkan');
+            </script>";
+} else if (isset($_GET['status']) == 'gagal') {
+    echo    "<script>
+                window.location.href='userpage.php';
+                alert('data anda gagal dimasukkan');
+            </script>";
+}
 ?>
 <!--User Profile-->
 <section id="profile">

@@ -24,7 +24,7 @@ if(isset($_POST['update'])) {
         $_SESSION['username'] = $username;
         header("Location: userpage.php?status=berhasil");
     } else {
-        header("Location: userpage.phpstatus=gagal");  
+        header("Location: userpage.php?status=gagal");  
     }
 }
  

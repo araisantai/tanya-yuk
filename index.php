@@ -11,6 +11,12 @@ if (isset($_GET['search'])) {
     ");
 }
 
+if (isset($_GET['status']) == 'berhasil') {
+    echo    "<script>
+                window.location.href='index.php';
+                alert('data anda berhasil dimasukkan');
+            </script>";
+}
 ?>  
 <!--Kolom Pertanyaan-->
 <section id="Question" class="section-bg">
