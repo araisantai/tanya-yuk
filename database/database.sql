@@ -51,13 +51,22 @@ CONSTRAINT uname_FK FOREIGN KEY(id_pertanyaan) references Pertanyaan(id_pertanya
 
 -- insert data
 INSERT INTO Pengguna(username, password, nama_akun) VALUES 
-('lewis', 'password123', 'name12'),
-('charles', 'password123', 'name14'),
-('ahmad', 'password123', 'name32');
+('lewis', 'password123', 'Lewis Gilbert'),
+('charles', 'password123', 'Sir Franks'),
+('ahmad', 'password123', 'Zero Day');
 
 INSERT INTO Pertanyaan(pertanyaan, username, foto_pertanyaan) VALUES
-('apakah java lebih baik dari C++?', 'lewis', 'img.png'),
-('apakah C++ lebih baik dari java?', 'charles', 'img.png'),
-('apakah java lebih baik dari C++?', 'ahmad', 'img.png'),
-('bagaimana cara belajar programming?', 'charles', 'img.png'),
-('apakah bisa belajar java 1 minggu?', 'ahmad', 'img.png');
+('apakah java lebih baik dari C++?', 'lewis', 'sample.png'),
+('Tips belajar java 1 minggu?', 'charles', 'samples.png'),
+('apakah java lebih baik dari C++?', 'ahmad', 'sample.png'),
+('siapakah yang akan menang world cup?', 'charles', 'samples.png');
+
+INSERT INTO J_K(komentar, id_pertanyaan, username, foto_komentar) VALUES
+('Tentu saja java lebih baik', 1, 'ahmad', 'sample.png'),
+('Sepertinya java bagus untuk OOP', 1, 'lewis', 'sample.png'),
+('Argentina', 4, 'charles', 'sample.png'),
+('France again... :) ', 4, 'ahmad', 'sample.png'),
+('test comment... :) ', 3, 'ahmad', 'sample.png'),
+('test comment... :) ', 3, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png');

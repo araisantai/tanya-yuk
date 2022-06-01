@@ -2,7 +2,6 @@
 include 'includes/header.php';
 include 'function/config.php';
 $tanya = pg_query("SELECT * FROM pertanyaan ORDER BY id_pertanyaan DESC");
-$komen = pg_query("SELECT * FROM j_k");
 
 if (isset($_GET['search'])) {
     $search = $_GET["search"];
@@ -18,14 +17,25 @@ if (isset($_GET['search'])) {
     <div class="row gx-5" style="margin: auto;">
         <div class="col">
             <h1>Forum Pertanyaan</h1>            
-            <?php while($result = pg_fetch_array($tanya)) :?>
+            <?php while($result = pg_fetch_array($tanya)) : ?>
             <a href="uploadans.php?pertanyaan=<?= $result['id_pertanyaan']; ?>">
             <div class="p-5">
                 <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                     <div class="member-info">
                     <h4><?= $result['pertanyaan']; ?></h4>
                     <span><?= $result['username']; ?></span>
-                    <p>Jawaban (Kalo Ada)</p>
+                    <?php
+                        $id = $result['id_pertanyaan'];
+                        $q = pg_query("SELECT * FROM j_k WHERE id_pertanyaan = $id");
+                        $i = 0;
+                        while ($komentar = pg_fetch_array($q)) {                            
+                            echo "<p>".$komentar["komentar"]."</p>";
+                            if ($i > 2) {
+                                break;
+                            }
+                            $i++;
+                        }
+                    ?>
                     </div>
                 </div>
             </div>

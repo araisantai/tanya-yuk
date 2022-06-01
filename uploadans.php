@@ -16,6 +16,12 @@ $komentar = pg_query("SELECT * FROM j_k WHERE id_pertanyaan='$id_tanya'");
     <br><br><br><br><br><br>
         <h4>Pertanyaan</h4>
         <h5><?= $content["pertanyaan"]; ?></h5>
+        <?php
+            $photo = $content['foto_pertanyaan']; 
+            if ($photo != NULL) {
+                echo "<img src='uploads/".$photo."' alt=''>";
+            }
+        ?>
     <form action="answer.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id_pertanyaan" value="<?= $id_tanya; ?>">
         <h4>Tulis Komentar</h4>
@@ -36,7 +42,12 @@ $komentar = pg_query("SELECT * FROM j_k WHERE id_pertanyaan='$id_tanya'");
                         <div class="member-info">
                         <h4><?=  $result['komentar']; ?></h4>
                         <span><?= $result['username']; ?></span>
-                        <!-- <img src="" alt=""> -->
+                        <?php
+                        $foto = $result['foto_komentar']; 
+                        if ($foto != NULL) {
+                            echo "<img src='uploads/".$foto."' alt=''>";
+                        }
+                        ?>
                         </div>
                     </div>
                 </div>
