@@ -10,7 +10,7 @@ if(isset($_POST['submit'])) {
     $query = "INSERT INTO j_k(komentar, id_pertanyaan, foto_komentar) VALUES('$comment', '$id_tanya', '$uploadfile')";
     $result = pg_query($db, $query);
     if( $result==TRUE ) {
-        header('Location: uploadans.php?upload=berhasil');
+        header('Location: index.php');
 	} else {
 		header('Location: uploadans.php?upload=gagal');
 	}

@@ -1,6 +1,6 @@
 <?php 
 include 'function/config.php';
-include 'upload_image.php';
+include 'uploadimg.php';
 if(isset($_POST['submit'])) {
         // var_dump($_POST);
         // var_dump($_FILES);
