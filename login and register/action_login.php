@@ -17,7 +17,7 @@ if(isset($_POST['masuk']))
     if(($result['username']==$username)&&($result['password']==$pass))
     {
         $_SESSION['username']=$result['username'];
-        header('Location:../front end/index.php');
+        header('Location: ../userpage.php');
     }
     else
     {

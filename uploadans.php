@@ -4,7 +4,7 @@ include 'function/config.php';
 session_start();
 
 if(!isset($_SESSION["username"])) {
-    header("Location: index.php");
+    header("Location: login and register/login_page.php");
 }
 $id_tanya = $_GET["pertanyaan"];
 $query = pg_query("SELECT * FROM pertanyaan WHERE id_pertanyaan='$id_tanya'");
