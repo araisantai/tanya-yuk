@@ -1,4 +1,5 @@
 <?php 
+include 'includes/header.php';
 include 'function/config.php';
 session_start();
 
@@ -29,34 +30,27 @@ if(isset($_POST['update'])) {
 }
  
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- 
-    <link rel="stylesheet" type="text/css" href="style.css">
- 
-    <title>Tanya yuk!!</title>
-</head>
-<body>
-    <div class="container">
+<section id="profile">
+    <div class="card">
+        <div class="profile d-flex justify-content-center">
+            <img src="frontend/img/profile.png" alt="mdo" class="profilepict">
+        </div>
         <form action="" method="POST" class="login-email">
-            <h3 class="login-text" style="font-size: 2rem; font-weight: 800;">Register</h3>
+            <h3 class="login-text text-center" style="font-size: 25px; font-weight: 800;">Edit Profile</h3>
             <div class="input-group">
-                <label for="nama_akun"><b>Nama akun :</b></label>
+                <label for="nama_akun"><b>Nama Akun:  </b></label>
                 <input type="text" placeholder="Nama akun" name="nama_akun" value="<?= $result['nama_akun']; ?>" required>
             </div>
             <div class="input-group">
-                <label for="username"><b>Username :</b></label>
+                <label for="username"><b>Username   :  </b></label>
                 <input type="text" placeholder="Username" name="username" value="<?= $result['username']; ?>" required>
             </div>
             <div class="input-group">
-                <button name="update" class="btn">Update</button>
+                <button name="update" class="btn-edit">Update <i class="bi bi-check2-square"></i></button>
+            </div>
         </form>
     </div>
-</body>
-</html>
+</section>
+<?php
+include 'includes/footer.php'
+?>

@@ -35,15 +35,6 @@ if (isset($_GET['status']) == 'gagal') {
                     </div>
                 </div>
                 <input type="hidden" name="username" value="<?= $user; ?>">
-                <div class="form-group">
-                    <label for=" name exampleFormControlSelect1">Kategori</label>
-                    <select class="form-select" aria-label="Default select example" required>
-                        <option selected>Pilih Kategori dari Pertanyaanmu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
                 <div class="my-3">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>

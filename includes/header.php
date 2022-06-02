@@ -33,7 +33,7 @@
         </div>
         <div class="container d-flex align-items-center" style="padding: 0px; margin: auto;">
 
-            <a class="logo me-auto"><img src="img/favicon.png" alt="" class="img-fluid"></a>
+            <a class="logo me-auto"><img src="frontend/img/icon.png" alt="" class="img-fluid"></a>
 
             <form class="d-flex w-75" style="margin-bottom: 0px;" action="index.php" method="get">
                 <input class="form-control me-2" type="search" name="search" placeholder="Search..." aria-label="Search" autocomplete="off">
@@ -43,7 +43,7 @@
             <a href="uploadquest.php"><h1>+</h1></a>
             <!-- <i class="bi bi-plus-lg"></i> -->
 
-            <a href="userpage.php"><img src="frontend/img/spo6.png" alt="mdo" class="pp"></a>
+            <a href="userpage.php"><img src="frontend/img/profile.png" alt="mdo" class="pp"></a>
 
         </div>
     </header>
