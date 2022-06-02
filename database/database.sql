@@ -73,9 +73,9 @@ INSERT INTO J_K(komentar, id_pertanyaan, username, foto_komentar) VALUES
 ('test comment... :) ', 3, 'ahmad', 'sample.png'),
 ('test comment... :) ', 3, 'ahmad', 'sample.png'),
 ('test comment... :) ', 2, 'ahmad', 'sample.png'),
-('test comment... :) ', 2, 'ahmad', 'sample.png');
-('test comment... :) ', 2, 'ahmad', 'sample.png');
-('test comment... :) ', 2, 'ahmad', 'sample.png');
-('test comment... :) ', 2, 'ahmad', 'sample.png');
-('test comment... :) ', 2, 'ahmad', 'sample.png');
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
 ('test comment... :) ', 2, 'ahmad', 'sample.png');
