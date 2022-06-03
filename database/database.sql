@@ -62,11 +62,20 @@ INSERT INTO Pertanyaan(pertanyaan, username, foto_pertanyaan) VALUES
 ('siapakah yang akan menang world cup?', 'charles', 'samples.png');
 
 INSERT INTO J_K(komentar, id_pertanyaan, username, foto_komentar) VALUES
-('Tentu saja java lebih baik', 1, 'ahmad', 'sample.png'),
-('Sepertinya java bagus untuk OOP', 1, 'lewis', 'sample.png'),
-('Argentina', 4, 'charles', 'sample.png'),
-('France again... :) ', 4, 'ahmad', 'sample.png'),
+('Java >>> C++ :)', 1, 'lewis', 'sample.png'),
+('Java >>> C++ :)', 1, 'lewis', 'sample.png'),
+('Java >>> C++ :)', 1, 'lewis', 'sample.png'),
+('France again... :( ', 4, 'ahmad', 'sample.png'),
+('France again... :( ', 4, 'ahmad', 'sample.png'),
+('France again... :( ', 4, 'ahmad', 'sample.png'),
 ('test comment... :) ', 3, 'ahmad', 'sample.png'),
 ('test comment... :) ', 3, 'ahmad', 'sample.png'),
+('test comment... :) ', 3, 'ahmad', 'sample.png'),
+('test comment... :) ', 3, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
+('test comment... :) ', 2, 'ahmad', 'sample.png'),
 ('test comment... :) ', 2, 'ahmad', 'sample.png'),
 ('test comment... :) ', 2, 'ahmad', 'sample.png');

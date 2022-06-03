@@ -31,7 +31,7 @@ if (isset($_GET['status']) == 'berhasil') {
                 <div class="row">
                     <h4>Pertanyaan</h4>
                     <div class="form-group col-lg-8 mb-2">
-                        <textarea class="form-control" name="question"><?= $content["pertanyaan"]; ?></textarea>
+                        <textarea class="form-control" name="question" readonly><?= $content["pertanyaan"]; ?></textarea>
                     </div>
                     <div class="form-group col-lg-4">
                         <div class="mb-3">

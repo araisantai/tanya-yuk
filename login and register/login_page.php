@@ -35,6 +35,7 @@
                 <i class="bi bi-lock-fill"></i>
                 <input type="password" placeholder="Password" name="password" required="required"/>
               </div>
+              <p class="login-register-text">Anda belum punya akun? <a href="../login and register/register_page.php">Register</a></p>
               <input type="submit" value="Login" name="masuk" class="btn solid" />
           </form>
           </div>
