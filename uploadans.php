@@ -24,7 +24,7 @@ if (isset($_GET['status']) == 'berhasil') {
             </script>";
 }
 ?>
-<body>
+
     <section class="section-bg">
         <div class="upans">
             <div class="container">
@@ -35,17 +35,49 @@ if (isset($_GET['status']) == 'berhasil') {
                     </div>
                     <div class="form-group col-lg-4">
                         <div class="mb-3">
-                            <div class="img-label">
+                            <div class="img-label d-flex justify-content-center">
                                 <?php
                                     $photo = $content['foto_pertanyaan']; 
                                     if ($photo != NULL) {
-                                        echo "<img src='uploads/".$photo."' alt=''>";
+                                        echo "<img id='myImg' src='uploads/".$photo."' alt='' class='foto'>";
                                     }
                                 ?>
+                                <div id="myModal" class="modal">
+                                    <span class="close" style="position: absolute; top: 35px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; z-index: 200;"><i class="bi bi-x"></i></span>
+                                    <img class="modal-content" id="img01" style="max-width: 625px; height:auto;">
+                                </div>
+                                <script>
+                                    // Get the modal
+                                    var modal = document.getElementById("myModal");
+
+                                    var img = document.getElementById("myImg");
+                                    var modalImg = document.getElementById("img01");
+                                    img.onclick = function(){
+                                        document.getElementById("myModal").style.display = "block";
+                                        document.getElementById("img01").src = this.src;
+                                    }
+
+                                    // Get the <span> element that closes the modal
+                                    var span = document.getElementsByClassName("close")[0];
+
+                                    // When the user clicks on <span> (x), close the modal
+                                    span.onclick = function() { 
+                                    modal.style.display = "none";
+                                    }
+                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Question" class="section-bg" style = "margin-top: 0px;">
+        <div class="row gx-5" style="margin: auto;">
+            <div class="col">
+                <h1 style="font-family: 'Lobster';">Komentar</h1> 
+                <div class="upans" style="margin: 20px 0;">
                 <div class="row">
                     <!-- form here -->
                     <form action="answer.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
@@ -74,15 +106,8 @@ if (isset($_GET['status']) == 'berhasil') {
                         <div class="text-center"><button type="submit" name="submit">Kirim Komentar</button></div>
                     </form>
                     <!-- end form -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="Question" class="section-bg" style = "margin-top: 0px;">
-        <div class="row gx-5" style="margin: auto;">
-            <div class="col">
-                <h1>Komentar</h1>            
+                </div>  
+                </div>         
                 <?php while($result = pg_fetch_array($komentar)) : ?>
                 <div class="p-5">
                     <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
@@ -92,9 +117,32 @@ if (isset($_GET['status']) == 'berhasil') {
                         <?php
                             $foto = $result['foto_komentar']; 
                             if ($foto != NULL) {
-                                echo "<img src='uploads/".$foto."' alt=''>";
+                                echo "<img id='myImgk' src='uploads/".$foto."' alt=''>";
                             }
                         ?>
+                        <div id="myModal" class="modal">
+                            <span class="close" style="position: absolute; top: 35px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; z-index: 200;"><i class="bi bi-x"></i></span>
+                            <img class="modal-content" id="img01" style="max-width: 625px; height:auto;">
+                        </div>
+                        <script>
+                            // Get the modal
+                            var modal = document.getElementById("myModal");
+
+                            var img = document.getElementById("myImgk");
+                            var modalImg = document.getElementById("img01");
+                            img.onclick = function(){
+                                document.getElementById("myModal").style.display = "block";
+                                document.getElementById("img01").src = this.src;
+                            }
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() { 
+                            modal.style.display = "none";
+                            }
+                        </script>
                         </div>
                     </div>
                 </div>
@@ -102,4 +150,6 @@ if (isset($_GET['status']) == 'berhasil') {
             </div>
         </div>
     </section>
-</body>
+<?php
+include 'includes/footer.php'
+?>

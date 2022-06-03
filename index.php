@@ -22,7 +22,7 @@ if (isset($_GET['status']) == 'berhasil') {
 <section id="Question" class="section-bg">
     <div class="row gx-5" style="margin: auto;">
         <div class="col">
-            <h1>Forum Pertanyaan</h1>            
+            <h1 style="font-family: 'Lobster';">Forum Pertanyaan</h1>            
             <?php while($result = pg_fetch_array($tanya)) : ?>
             <a href="uploadans.php?pertanyaan=<?= $result['id_pertanyaan']; ?>">
             <div class="p-5">

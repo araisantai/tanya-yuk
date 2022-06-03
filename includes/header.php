@@ -25,9 +25,6 @@
                 </div>
                 <ul class="list-items">
                     <li><a href="index.php"><i class="bi bi-house-door-fill"></i>Beranda</a></li>
-                    <li><a href=""><i class="bi bi-house-door-fill"></i>Beranda</a></li>
-                    <li><a href=""><i class="bi bi-house-door-fill"></i>Beranda</a></li>
-                    <li><a href=""><i class="bi bi-house-door-fill"></i>Beranda</a></li>
                 </ul>
             </nav>
         </div>

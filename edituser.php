@@ -36,7 +36,7 @@ if(isset($_POST['update'])) {
             <img src="frontend/img/profile.png" alt="mdo" class="profilepict">
         </div>
         <form action="" method="POST" class="login-email">
-            <h3 class="login-text text-center" style="font-size: 25px; font-weight: 800;">Edit Profile</h3>
+            <h3 class="login-text text-center" style="font-size: 25px; font-weight: 800; font-family:'Lobster';">Edit Profile</h3>
             <div class="input-group">
                 <label for="nama_akun"><b>Nama Akun:  </b></label>
                 <input type="text" placeholder="Nama akun" name="nama_akun" value="<?= $result['nama_akun']; ?>" required>
