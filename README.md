@@ -2,7 +2,7 @@
 
 > Sebuah aplikasi / website forum tanya jawab yang memungkinkan pengguna untuk bertanya mengenai berbagai hal untuk menemukan sebuah solusi.
 
-## Projek Rekayasa Perangkat Lunak (KOM331)
+## Projek Rekayasa Perangkat Lunak
 
 <ul>
     <li> Pararel            : P2 </li>
